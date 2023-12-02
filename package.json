@@ -1,6 +1,7 @@
 {
   "name": "@niftylius/simple-status-provider",
-  "version": "1.0.1",
+  "version": "1.0.0",
+  "author": "NiftyliuS <niftylius@gmail.com>",
   "description": "description",
   "main": "status-provider.js",
   "scripts": {
@@ -16,7 +17,6 @@
     "type": "git",
     "url": "git+ssh://git@bitbucket.org/gamer-guard-io/service-boilerplate.git"
   },
-  "author": "niftylius",
   "license": "MIT",
   "homepage": "https://bitbucket.org/gamer-guard-io/service-boilerplate#readme",
   "dependencies": {
@@ -53,5 +53,8 @@
       "pre-commit": "npm run lint"
     }
   },
-  "keywords": []
+  "keywords": [],
+  "bugs": {
+    "url": "https://bitbucket.org/gamer-guard-io/service-boilerplate/issues"
+  }
 }
