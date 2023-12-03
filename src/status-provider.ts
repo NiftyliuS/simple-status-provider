@@ -72,6 +72,7 @@ export const startStatusProvider = (options: ProviderOptionsInterface): express.
         }
         if (!rabbitMqEnabled) {
           response.rabbitMq = ProviderStatuses.DISABLED;
+          response.rabbitMqQueueSize = -1;
           response.rabbitMqResponseTime = -1;
         }
         res.send({
@@ -90,6 +91,8 @@ export const startStatusProvider = (options: ProviderOptionsInterface): express.
           databaseResponseTime: dbEnabled ? 99999 : -1,
           natsResponseTime: natsEnabled ? 99999 : -1,
           redisResponseTime: redisEnabled ? 99999 : -1,
+          rabbitMqQueueSize: -1,
+          rabbitMqResponseTime: rabbitMqEnabled ? 99999 : -1,
         } as ProviderStatusResponse);
       }
     })();

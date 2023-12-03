@@ -39,6 +39,7 @@ export interface ProviderStatusResponse {
   natsResponseTime?: number;
   redisResponseTime?: number;
   rabbitMqResponseTime?: number;
+  rabbitMqQueueSize?: number;
   database?: ProviderStatuses;
   nats?: ProviderStatuses;
   redis?: ProviderStatuses;
