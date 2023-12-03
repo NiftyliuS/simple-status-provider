@@ -13,6 +13,7 @@ export const startStatusProvider = (options: ProviderOptionsInterface): express.
   const statusServer = express();
   const dbEnabled = options.dbEnabled ?? true;
   const natsEnabled = options.natsEnabled ?? true;
+  const rabbitMqEnabled = options.rabbitMqEnabled ?? true;
   const redisEnabled = options.redisEnabled ?? false;
   statusServer.get('/readiness', (_req, res): void => {
     (async (): Promise<any> => {
@@ -68,6 +69,10 @@ export const startStatusProvider = (options: ProviderOptionsInterface): express.
         if (!redisEnabled) {
           response.redis = ProviderStatuses.DISABLED;
           response.redisResponseTime = -1;
+        }
+        if (!rabbitMqEnabled) {
+          response.rabbitMq = ProviderStatuses.DISABLED;
+          response.rabbitMqResponseTime = -1;
         }
         res.send({
           ramUsage: memoryStats,

@@ -38,9 +38,11 @@ export interface ProviderStatusResponse {
   databaseResponseTime?: number;
   natsResponseTime?: number;
   redisResponseTime?: number;
+  rabbitMqResponseTime?: number;
   database?: ProviderStatuses;
   nats?: ProviderStatuses;
   redis?: ProviderStatuses;
+  rabbitMq?: ProviderStatuses;
   ramUsage?: ProviderStatusMemoryUsageInterface;
 }
 
@@ -55,6 +57,7 @@ export interface ProviderOptionsInterface {
   dbEnabled?: boolean;
   natsEnabled?: boolean;
   redisEnabled?: boolean;
+  rabbitMqEnabled?: boolean;
   silent?: boolean;
   readiness: () => Promise<ProviderReadyResponse> | ProviderReadyResponse;
   liveliness: () => Promise<ProviderLivelinessResponse> | ProviderLivelinessResponse;
