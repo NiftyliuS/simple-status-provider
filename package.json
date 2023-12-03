@@ -1,6 +1,6 @@
 {
   "name": "@niftylius/simple-status-provider",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "NiftyliuS <niftylius@gmail.com>",
   "description": "description",
   "main": "status-provider.js",
